@@ -1,8 +1,8 @@
-# CNC BoosterPack for Texas Instruments LaunchPads
+## CNC BoosterPack for Texas Instruments LaunchPads
 
 A BoosterPack that provides 3-axis motor support for some LaunchPads, driver code for my [grbl-library](https://github.com/terjeio/grbl) will soon made available for MSP432, Tiva C (TM4C123GH6PM) and MSP430F5529.
 
-NOTE: design files are in KiCad 5 format!
+**NOTE:** design files are in KiCad 5 format!
 
 **Features:**
 
@@ -28,4 +28,13 @@ Detailed documentation to follow.
 
 ![PCB Top](media/pcb-bottom.png)
 
+---
+
+## Bonus design: Polulu style motor driver "dummy"
+
+* with buffered (open drain) outputs for external drivers like DQ542MA.
+
+**NOTE:** output signals are inverted
+
+![Dummy PCB](media/Motor-driver-dummy.png)
 
