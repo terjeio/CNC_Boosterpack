@@ -1,6 +1,6 @@
 ## CNC BoosterPack for Texas Instruments LaunchPads
 
-A BoosterPack that provides 3-axis motor support for some LaunchPads, driver code for my [grbl-library](https://github.com/terjeio/grbl) will soon made available for MSP432, Tiva C (TM4C123GH6PM) and MSP430F5529.
+A BoosterPack that provides 3-axis motor support for some LaunchPads, driver code for my [grbl-library](https://github.com/terjeio/grblHAL) is now available for MSP432, Tiva C (EK-TM4C123GXL and EK-TM4C1294XL) and MSP430F5529.
 
 **NOTE:** design files are in KiCad 5 format!
 
