@@ -1,4 +1,4 @@
- ## LaunchPad pin assignments for CNC Boosterpack rev1.0
+ ## LaunchPad GRBL pin assignments for CNC Boosterpack rev1.0
 
  ## Tiva C \(TM4C123G\)
 
@@ -17,6 +17,36 @@
 __NOTE__: Remove R9 and R10!
 
 With shorts - Limit X (R10): PE0 -> PF1, Reset (R11): PB3 -> PC7
+
+## Tiva C \(TM4C1294\) Boosterpack1
+
+```
+                      3v3 [] [] VBUS (5v)             Limit Z PF1 [] [] GND
+                      PE4 [] [] GND                   Limit Y PF2 [] [] PM3 Spindle PWM
+       UART7 RX/GPIO4 PC4 [] [] PE0                     Reset PF3 [] [] PH2 Limit X
+       UART7 TX/GPIO5 PC5 [] [] PE1 Step X        Safety Door PG0 [] [] PH3 Stepper disable Z
+  Keypad strobe/GPIO6 PC6 [] [] PE2 Step Y          Feed Hold PL4 [] [] RST
+                      PE5 [] [] PE3 Step Z        Cycle Start PL5 [] [] PD1 Dir X
+                Dir Z PD3 [] [] PD7 Stepper disable XY        PL0 [] [] PD0 Dir Y
+                Probe PC7 [] [] PA6 Spindle enable      Flood PL1 [] [] PN2 GPIO1
+               I2CSCL PB2 [] [] PM4 Spindle direction    Mist PL2 [] [] PN3 GPIO2
+               I2CSDA PB3 [] [] PM5                 RTS/GPIO0 PL3 [] [] PP3 GPIO3
+```
+
+## Tiva C \(TM4C1294\) Boosterpack2
+
+```
+                      3v3 [] [] VBUS (5v)             Limit Z PG1 [] [] GND
+                      PD2 [] [] GND                   Limit Y PK4 [] [] PM7 Spindle PWM
+       UART6 RX/GPIO4 PP0 [] [] PB4                     Reset PK5 [] [] PP5 Limit X
+       UART6 TX/GPIO5 PP1 [] [] PB5 Step X        Safety Door PM0 [] [] PA7 Stepper disable Z
+  Keypad strobe/GPIO6 PD4 [] [] PK0 Step Y          Feed Hold PM1 [] [] RST
+                      PD5 [] [] PK1 Step Z        Cycle Start PM2 [] [] PQ2 Dir X
+                Dir Z PQ0 [] [] PK2 Stepper disable XY        PH0 [] [] PQ3 Dir Y
+                Probe PP4 [] [] PK3 Spindle enable      Flood PH1 [] [] PP3 GPIO1
+               I2CSCL PN5 [] [] PA4 Spindle direction    Mist PK6 [] [] PQ1 GPIO2
+               I2CSDA PN4 [] [] PA5                 RTS/GPIO0 PK7 [] [] PM6 GPIO3
+```
 
 ## MSP430F5529
 
@@ -51,10 +81,9 @@ With shorts - Reset (R12): P2.4 -> P6.0, Safety Door (R13): P5.6 -> P6.1, Limit 
 
 ---
 
-### Stepper drivers
+## Stepper drivers
 
-#### A4998 - requires 3V3 on VDD pin
-
+### A4998 - requires 3V3 on VDD pin
 ```
 MS1     MS2     MS3     Microstep resolution
 Low 	Low 	Low 	Full step
@@ -63,11 +92,9 @@ Low 	High 	Low 	Quarter step
 High 	High 	Low 	Eighth step
 High 	High 	High 	Sixteenth step
 ```
-
 https://www.pololu.com/product/1182
 
-#### DRV8825
-
+### DRV8825
 ```
 MS1     MS2     MS3     Microstep resolution
 Low 	Low 	Low 	Full step
@@ -79,5 +106,4 @@ High 	Low 	High 	1/32 step
 Low 	High 	High 	1/32 step
 High 	High 	High 	1/32 step
 ```
-
 https://www.pololu.com/product/2133

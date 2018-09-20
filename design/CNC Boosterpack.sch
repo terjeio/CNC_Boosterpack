@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "CNC Boosterpack"
-Date "2018-04-13"
-Rev "1.0"
+Date "2018-09-20"
+Rev "1.0b"
 Comp "Io Engineering"
 Comment1 "Terje Io"
 Comment2 ""
