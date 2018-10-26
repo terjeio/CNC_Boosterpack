@@ -22,6 +22,8 @@ A BoosterPack that provides 3-axis motor support for some LaunchPads, driver cod
 
 * Optional on-board EEPROM for persistent storage of settings.
 
+Separate version for Trinamic TMC2130 drivers added, onboard I2C <> SPI bridge for driver control. 4-layer board.
+
 Detailed documentation to follow.
 
 ![PCB Top](media/pcb-top.png)
