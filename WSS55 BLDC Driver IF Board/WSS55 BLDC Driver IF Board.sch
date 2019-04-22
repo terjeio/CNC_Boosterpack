@@ -1,0 +1,358 @@
+EESchema Schematic File Version 4
+LIBS:WSS55 BLDC Driver IF Board-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "WS55-xxx BLDC driver board IF for CNC BoosterPack"
+Date "2019-04-07"
+Rev "1"
+Comp "Io Engineering"
+Comment1 "Terje Io"
+Comment2 ""
+Comment3 ""
+Comment4 "Licensed under CERN OHL v.1.2 or later"
+$EndDescr
+$Comp
+L Connector:Conn_01x10_Male J1
+U 1 1 5C801F44
+P 3300 2600
+F 0 "J1" H 3272 2482 50  0000 R CNN
+F 1 "BLDC Driver" H 3272 2573 50  0000 R CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_10-G-3.81_1x10_P3.81mm_Vertical" H 3300 2600 50  0001 C CNN
+F 3 "~" H 3300 2600 50  0001 C CNN
+	1    3300 2600
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5C8057AF
+P 4900 3050
+F 0 "#PWR0101" H 4900 2800 50  0001 C CNN
+F 1 "GND" H 4905 2877 50  0000 C CNN
+F 2 "" H 4900 3050 50  0001 C CNN
+F 3 "" H 4900 3050 50  0001 C CNN
+	1    4900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2400 6300 2400
+$Comp
+L Isolator:PC817 U1
+U 1 1 5C807FE1
+P 5600 2200
+F 0 "U1" H 5600 2525 50  0000 C CNN
+F 1 "PC817" H 5600 2434 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 5400 2000 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 5600 2200 50  0001 L CNN
+	1    5600 2200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2100 5250 2100
+Wire Wire Line
+	5900 2300 6000 2300
+Wire Wire Line
+	6000 2300 6000 2900
+Wire Wire Line
+	6000 2900 6300 2900
+$Comp
+L Device:R R2
+U 1 1 5C80E309
+P 5900 1850
+F 0 "R2" H 5950 1800 50  0000 L CNN
+F 1 "150" V 5900 1750 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5830 1850 50  0001 C CNN
+F 3 "~" H 5900 1850 50  0001 C CNN
+	1    5900 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 1600
+Wire Wire Line
+	6300 2500 5900 2500
+Wire Wire Line
+	5250 1600 5250 2100
+Wire Wire Line
+	6200 1600 6200 2400
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5C7ED4C8
+P 6500 1450
+F 0 "J2" H 6580 1492 50  0000 L CNN
+F 1 "3V3" H 6580 1401 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6500 1450 50  0001 C CNN
+F 3 "~" H 6500 1450 50  0001 C CNN
+	1    6500 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 1450 5900 1450
+Wire Wire Line
+	5900 1450 5900 1700
+Wire Wire Line
+	5900 2000 5900 2100
+$Comp
+L Device:CP C1
+U 1 1 5C7EFA8D
+P 3950 2750
+F 0 "C1" H 4068 2796 50  0000 L CNN
+F 1 "4u7" H 4068 2705 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I" H 3988 2600 50  0001 C CNN
+F 3 "~" H 3950 2750 50  0001 C CNN
+	1    3950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5C7F688C
+P 5500 1400
+F 0 "J4" V 5464 1212 50  0000 R CNN
+F 1 "VDrive" V 5600 1450 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5500 1400 50  0001 C CNN
+F 3 "~" H 5500 1400 50  0001 C CNN
+	1    5500 1400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 1600 5250 1600
+Wire Wire Line
+	5600 1600 6200 1600
+Wire Wire Line
+	6300 2800 6200 2800
+Wire Wire Line
+	6200 2800 6200 3250
+Wire Wire Line
+	6200 3250 6300 3250
+Wire Wire Line
+	6300 3350 6100 3350
+Wire Wire Line
+	6100 3350 6100 3000
+Connection ~ 6100 3000
+Wire Wire Line
+	6100 3000 6300 3000
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5C7F7EFE
+P 6500 3350
+F 0 "J5" H 6650 3200 50  0000 C CNN
+F 1 "Coolant out" H 6800 3300 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6500 3350 50  0001 C CNN
+F 3 "~" H 6500 3350 50  0001 C CNN
+	1    6500 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x07 J3
+U 1 1 5C803444
+P 6500 2700
+F 0 "J3" H 6600 2550 50  0000 L CNN
+F 1 "CNC Boosterpack in" H 6580 2651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 6500 2700 50  0001 C CNN
+F 3 "~" H 6500 2700 50  0001 C CNN
+	1    6500 2700
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q3
+U 1 1 5CABF420
+P 5000 2300
+F 0 "Q3" H 4850 2350 50  0000 L CNN
+F 1 "2N7002" H 4700 2450 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5200 2225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5000 2300 50  0001 L CNN
+	1    5000 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q2
+U 1 1 5CAC1CC2
+P 4500 2550
+F 0 "Q2" H 4706 2596 50  0000 L CNN
+F 1 "2N7002" H 4706 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 2475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 4500 2550 50  0001 L CNN
+	1    4500 2550
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5250 2300
+Wire Wire Line
+	5200 2300 5250 2300
+$Comp
+L Device:R R5
+U 1 1 5CAC69EF
+P 4400 2200
+F 0 "R5" H 4450 2100 50  0000 L CNN
+F 1 "100" V 4400 2100 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4330 2200 50  0001 C CNN
+F 3 "~" H 4400 2200 50  0001 C CNN
+	1    4400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5CAC6EAC
+P 4400 1900
+F 0 "R4" H 4450 1800 50  0000 L CNN
+F 1 "100" V 4400 1800 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4330 1900 50  0001 C CNN
+F 3 "~" H 4400 1900 50  0001 C CNN
+	1    4400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CAC7EAD
+P 3950 2250
+F 0 "R3" H 4000 2150 50  0000 L CNN
+F 1 "1K2" V 3950 2150 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3880 2250 50  0001 C CNN
+F 3 "~" H 3950 2250 50  0001 C CNN
+	1    3950 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2400 3950 2500
+Wire Wire Line
+	3500 2500 3950 2500
+Connection ~ 3950 2500
+Wire Wire Line
+	3950 2500 3950 2600
+Wire Wire Line
+	3950 2100 3950 2050
+Wire Wire Line
+	3950 2050 4400 2050
+Connection ~ 4400 2050
+Wire Wire Line
+	3500 3000 3950 3000
+Wire Wire Line
+	4400 2750 4400 3000
+Connection ~ 4400 3000
+Wire Wire Line
+	3950 2900 3950 3000
+Connection ~ 3950 3000
+Wire Wire Line
+	3950 3000 4400 3000
+Wire Wire Line
+	3500 2900 3700 2900
+Wire Wire Line
+	3700 2900 3700 1250
+Wire Wire Line
+	3700 1250 4400 1250
+Wire Wire Line
+	4400 1250 4400 1350
+Wire Wire Line
+	4400 1250 4900 1250
+Wire Wire Line
+	5250 1250 5250 1600
+Connection ~ 4400 1250
+Wire Wire Line
+	5900 2500 5900 3350
+Wire Wire Line
+	5900 3350 3650 3350
+Wire Wire Line
+	3650 3350 3650 2800
+Wire Wire Line
+	3650 2800 3500 2800
+Wire Wire Line
+	5950 3400 3600 3400
+Wire Wire Line
+	3600 3400 3600 2400
+Wire Wire Line
+	3600 2400 3500 2400
+Wire Wire Line
+	5250 2300 5250 2600
+Wire Wire Line
+	5250 2300 5300 2300
+Wire Wire Line
+	4900 2500 4900 3000
+Connection ~ 4900 3000
+Wire Wire Line
+	4900 2100 4900 2000
+Wire Wire Line
+	4750 1550 4750 2000
+Wire Wire Line
+	4750 2550 4700 2550
+Wire Wire Line
+	4750 1550 4700 1550
+Wire Wire Line
+	4750 2000 4900 2000
+Connection ~ 4750 2000
+Wire Wire Line
+	4750 2000 4750 2550
+$Comp
+L Device:R R7
+U 1 1 5CADB8AA
+P 4900 1600
+F 0 "R7" H 4950 1500 50  0000 L CNN
+F 1 "1K2" V 4900 1500 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4830 1600 50  0001 C CNN
+F 3 "~" H 4900 1600 50  0001 C CNN
+	1    4900 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1450 4900 1250
+Connection ~ 4900 1250
+Wire Wire Line
+	4900 1250 5250 1250
+Wire Wire Line
+	4900 1750 4900 2000
+Connection ~ 4900 2000
+Wire Wire Line
+	4900 3000 4900 3050
+Wire Wire Line
+	4400 3000 4750 3000
+Wire Wire Line
+	5950 2600 5950 3400
+Wire Wire Line
+	5950 2600 6300 2600
+$Comp
+L Device:R R6
+U 1 1 5CAE1705
+P 4750 2750
+F 0 "R6" H 4600 2650 50  0000 L CNN
+F 1 "INF" V 4750 2650 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4680 2750 50  0001 C CNN
+F 3 "~" H 4750 2750 50  0001 C CNN
+	1    4750 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2550 4750 2600
+Connection ~ 4750 2550
+Connection ~ 4750 3000
+Wire Wire Line
+	4750 3000 4900 3000
+$Comp
+L Transistor_FET:IRLML6402 Q1
+U 1 1 5CAF8452
+P 4500 1550
+F 0 "Q1" H 4706 1504 50  0000 L CNN
+F 1 "IRLML6402" H 4706 1595 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 1475 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 4500 1550 50  0001 L CNN
+	1    4500 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 3000 5250 3000
+$Comp
+L Device:R R1
+U 1 1 5C80BCC5
+P 5250 2750
+F 0 "R1" H 5300 2850 50  0000 L CNN
+F 1 "820" V 5250 2700 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2750 50  0001 C CNN
+F 3 "~" H 5250 2750 50  0001 C CNN
+	1    5250 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 2900 4750 3000
+Wire Wire Line
+	5250 2900 5250 3000
+Connection ~ 5250 3000
+Wire Wire Line
+	5250 3000 6100 3000
+$EndSCHEMATC

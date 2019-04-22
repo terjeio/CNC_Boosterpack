@@ -2,6 +2,8 @@
 
 A BoosterPack that provides 3-axis motor support for some LaunchPads, driver code for my [grbl-library](https://github.com/terjeio/grblHAL) is now available for MSP432, Tiva C (EK-TM4C123GXL and EK-TM4C1294XL) and MSP430F5529.
 
+Prototype "motherboards" has been made for ESP32 and SAMD 21 (MKR ZERO) development boards allowing the CNC BoosterPack to be used with these, I may add them later.
+
 **NOTE:** design files are in KiCad 5 format!
 
 **Features:**
@@ -39,4 +41,14 @@ Detailed documentation to follow.
 **NOTE:** output signals are inverted
 
 ![Dummy PCB](media/Motor-driver-dummy.png)
+
+---
+
+## Bonus design II: BLDC Motor driver board, 3.3V (or 5V) PWM to 0 - 10V DC conversion
+
+* with opto-coupled PWM input.
+
+* PCB layout matches WSS55 BLDC Driver connector
+
+![BLDC Motor Driver PCB](media/WSS55-BLDC-Driver.png)
 
