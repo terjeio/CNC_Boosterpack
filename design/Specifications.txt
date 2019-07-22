@@ -1,0 +1,29 @@
+CNC BoosterPack Rev 1.0
+
+3-axis CNC addon for Texas Instruments LaunchPads with 40 pin interface.
+
+Support for my HALified version of GRBL (based on 1.1), currently drivers has been made for MSP432 (black version), Tiva C and MSP430F2955.
+NOTE: firmware is built with CCS 6.1, MSP432 driver is 100% CMSIS based.
+
+Opto-coupled inputs, NC switches recommended.
+
+Opto-coupled outputs with 200mA open drain drive for spindle on, spindle direction, flood and mist.
+Can drive most relays and solenoids directly. 
+Output section can be powered from internal 3V3 or 5V source, or from external source.
+If powered from external source outputs can be made opto-isolated via jumper setting.
+
+PWM-output for spindle speed currently directly connected to MCU pin (could be changed to open drain).
+
+I2C (IIC) interface with selectable voltage level (3V3 or 5V) via level shifter, dedicated interrupt input.
+I2C pinout compatible with my 4x4 keyboard project, supports jogging etc.
+
+Optional EEPROM for configuration settings for MCUs with no internal EEPROM.
+
+Polulu 8825 motor driver breakout board compatible. Fault signal routed to GPIO input.
+
+Considered for later revision:
+
+Break out SPI interface and add full support for Trinamic motor drivers.
+Optional (SPI) DAC for motor speed (laser power) control.
+
+This might require a 4-layer PCB and also solving the pinout cabal...
