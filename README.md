@@ -1,8 +1,8 @@
 ## CNC BoosterPack for Texas Instruments LaunchPads
 
-A BoosterPack that provides 3-axis motor support for some LaunchPads, driver code for my [grbl-library](https://github.com/terjeio/grblHAL) is now available for MSP432, Tiva C (EK-TM4C123GXL and EK-TM4C1294XL) and MSP430F5529.
+A BoosterPack that provides 3-axis motor support for some LaunchPads, driver code for [grblHAL](https://github.com/grblHAL) is available for [MSP432P401R](https://github.com/grblHAL/MSP432P401R), [MSP432E401Y](https://github.com/grblHAL/MSP432E401Y), Tiva C\([EK-TM4C123GXL](https://github.com/grblHAL/TM4C123) and [EK-TM4C1294XL](https://github.com/grblHAL/TM4C1294)\) and [MSP430F5529](https://github.com/grblHAL/MSP430F5529).
 
-Prototype "motherboards" has been made for ESP32, STM32F103 \(Bluepill\) and SAMD 21 \(MKR ZERO\) development boards allowing the CNC BoosterPack to be used with these, I may add them later.
+Prototype "motherboards" has been made for ESP32, STM32F103 \(Bluepill\) and SAMD21 \(MKRZERO\) development boards allowing the CNC BoosterPack to be used with these, I may add them later.
 
 **NOTE:** design files are in [KiCad 5](http://www.kicad-pcb.org/) format!
 
@@ -25,7 +25,7 @@ Prototype "motherboards" has been made for ESP32, STM32F103 \(Bluepill\) and SAM
 * Optional on-board EEPROM for persistent storage of settings.
 
 Separate version for Trinamic TMC2130 drivers added, onboard I2C \<\> SPI bridge for driver control. 4-layer board.
-A small batch of the Trinamic version has been made, good progress made on I2C \<\> SPI bridge firmware. Driver monitoring has been delegated to the bridge prosessor, a couple of additional datagrams will be implemented to facilitate support for this in the grblHAL-driver - first out will be for MSP432.
+A small batch of the Trinamic version has been made, good progress made on [I2C \<\> SPI bridge firmware](https://github.com/terjeio/Trinamic_TMC2130_I2C_SPI_Bridge). Driver monitoring has been delegated to the bridge prosessor, a couple of additional datagrams will be implemented to facilitate support for this in the grblHAL-driver - first out will be for MSP432.
 
 Both designs are now reduced in size so two boards may be mounted on TMC129 or MSP432E401Y LaunchPads for controlling up to 6-axes. 
 
@@ -58,4 +58,4 @@ Detailed documentation to follow.
 ![BLDC Motor Driver PCB](media/WSS55-BLDC-Driver.png)
 
 ---
-2019-07-22
+2021-05-02
