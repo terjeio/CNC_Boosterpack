@@ -4,7 +4,7 @@ A BoosterPack that provides 3-axis motor support for some LaunchPads, driver cod
 
 Prototype "motherboards" has been made for ESP32, STM32F103 \(Bluepill\) and SAMD21 \(MKRZERO\) development boards allowing the CNC BoosterPack to be used with these, I may add them later.
 
-**NOTE:** design files are in [KiCad 5](http://www.kicad-pcb.org/) format!
+**NOTE:** design files are in [KiCad 5](http://www.kicad.org/) format!
 
 **Features:**
 
@@ -58,4 +58,4 @@ Detailed documentation to follow.
 ![BLDC Motor Driver PCB](media/WSS55-BLDC-Driver.png)
 
 ---
-2021-05-02
+2021-10-28
